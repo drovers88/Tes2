@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F2109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tes2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,42 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicole Nakamoto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-GX-AIh">
+                                <rect key="frame" x="235" y="165" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2h-nl-mNm">
+                                <rect key="frame" x="336" y="279" width="30" height="30"/>
+                                <state key="normal" title="But"/>
+                                <connections>
+                                    <action selector="secondaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ilc-Ic-wFO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwa-dr-61h">
+                                <rect key="frame" x="235" y="279" width="35" height="30"/>
+                                <state key="normal" title="Farts"/>
+                                <connections>
+                                    <action selector="firstaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6Z-Zd-nkN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9wh-GX-AIh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BFc-zX-nRt"/>
+                            <constraint firstItem="Gwa-dr-61h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-48" id="Hrn-hr-KKT"/>
+                            <constraint firstItem="o2h-nl-mNm" firstAttribute="top" secondItem="9wh-GX-AIh" secondAttribute="bottom" constant="93" id="Kdd-zw-M9O"/>
+                            <constraint firstItem="Gwa-dr-61h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-6" id="PHR-hn-4cr"/>
+                            <constraint firstItem="o2h-nl-mNm" firstAttribute="leading" secondItem="Gwa-dr-61h" secondAttribute="trailing" constant="66" id="g0W-NV-bSN"/>
+                            <constraint firstItem="Gwa-dr-61h" firstAttribute="top" secondItem="9wh-GX-AIh" secondAttribute="bottom" constant="93" id="kbr-tw-LNa"/>
+                            <constraint firstItem="9wh-GX-AIh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-125" id="tGW-ub-urb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstlabel" destination="9wh-GX-AIh" id="pZv-mZ-oL4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
