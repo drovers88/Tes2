@@ -11,51 +11,59 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    //NicoleLabel
     @IBOutlet weak var firstlabel: UILabel!
-//Tapcount
-   
     
+    
+    //Textbox1
     @IBOutlet weak var Text1: UITextField!
     
-    var tapCount = 0
     
- //EndofTapcount
     
+    
+    //FartsLabel
     @IBAction func firstaction(sender: UIButton) {
         
         print ( Text1.text! )
         
-        
-        tapCount = tapCount + 1
-        
-        if tapCount >= 10 { firstlabel.text = " You win" }
-       
-    
-        }
-    
-   
-    @IBAction func secondaction(sender: UIButton) {firstlabel.text = Text1.text! + Text2.text!
-        print ( Text2.text! )
-        // NEW
-    
     }
     
     
+    //ButLabel
+    @IBAction func secondaction(sender: UIButton) {
+        let addition = false
+        if addition {
+        firstlabel.text = "Answer: \(Double(Text1.text!)! + Double(Text2.text!)!)"}
+        else {
+            firstlabel.text = "Answer: \(Double(Text1.text!)! - Double(Text2.text!)!)"}
+        
+        // NEW
+        
+    }
+    
+    
+    //TextBox2
     @IBOutlet weak var Text2: UITextField!
     
-    // end of poop
+    //ENDENDENDENDEND
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
