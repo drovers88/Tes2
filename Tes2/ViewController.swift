@@ -35,9 +35,10 @@ class ViewController: UIViewController {
         }
     
    
-    @IBAction func secondaction(sender: UIButton) {firstlabel.text = "I Know "
+    @IBAction func secondaction(sender: UIButton) {firstlabel.text = Text1.text! + Text2.text!
         print ( Text2.text! )
-        // poooooooooop
+        // NEW
+    
     }
     
     
